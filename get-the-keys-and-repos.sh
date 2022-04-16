@@ -4,18 +4,18 @@
 
 echo "Letting pacman know ADK-Linux package keys"
 
-sudo pacman-key --recv-keys 360DCBA5948FDE5944CA1E2E1A8DE33B5A149FDF --keyserver hkps://keyserver.ubuntu.com
-sudo pacman-key --lsign-key 360DCBA5948FDE5944CA1E2E1A8DE33B5A149FDF
+sudo pacman-key --recv-keys 0A74C5909A8A2600AD012AF67B22BF2F72D54DAC --keyserver hkps://keyserver.ubuntu.com
+sudo pacman-key --lsign-key 0A74C5909A8A2600AD012AF67B22BF2F72D54DAC
 
 sudo pacman-key --recv-keys DB8C9336927412AD01764AD88C40B4EF4EF24C82 --keyserver hkps://keyserver.ubuntu.com 
 sudo pacman-key --lsign-key DB8C9336927412AD01764AD88C40B4EF4EF24C82 
 
-sudo pacman -S wget --noconfirm --needed
+sudo pacman -Syy wget --noconfirm --needed
 
 echo "Getting the ADK-Linux keys from the ADK-Linux repo"
 
-sudo wget https://github.com/Technopig100/adklinux_repo/raw/main/x86_64/aadklinux-keyring-20230919-6-any.pkg.tar.zst -O /tmp/adklinux-keyring-20230919-6-any.pkg.tar.zst
-sudo pacman -U --noconfirm --needed /tmp/adklinux-keyring-20230919-6-any.pkg.tar.zst
+sudo wget https://github.com/Technopig100/adklinux_repo/raw/main/x86_64/adklinux-keyring-git* -O /tmp/adklinux-keyring-git*
+sudo pacman -U --noconfirm --needed /tmp/adklinux-keyring-git*
 
 ######################################################################################################################
 
