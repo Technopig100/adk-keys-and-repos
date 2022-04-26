@@ -26,7 +26,7 @@ echo '
 #ADK Linux repository
 
 #[adklinux_test_repo]
-#Include = /etc/pacman.d/adklinux-mirrorlist
+#Server = https://faireygitea2.duckdns.org/jacob/$repo/raw/branch/master/$arch/
 
 [adklinux_repo]
 Include = /etc/pacman.d/adklinux-mirrorlist' | sudo tee --append /etc/pacman.conf
